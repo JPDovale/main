@@ -2,32 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Estilização para Webkit (Chrome, Safari, Opera) */
+::-webkit-scrollbar {
+  width: 5px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  @apply bg-gray-500 shadow-md shadow-black;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+::-webkit-scrollbar-track {
+  @apply bg-gray-600; /* Cor de fundo da barra de rolagem */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Estilização para Firefox */
+/* Vale ressaltar que o Firefox requer o uso da propriedade scrollbar-color */
+/* para definir tanto a cor da alça quanto a cor do fundo da barra de rolagem */
+/* Isso só funciona no Firefox 64 e versões posteriores */
+/* Antes disso, você só pode alterar a cor da alça usando scrollbar-face-color */
+
+/* Versões recentes do Firefox (64+) */
+* {
+  scrollbar-color: #00ff00 #000000;
+}
+
+/* Versões mais antigas do Firefox (63 e abaixo) */
+* {
+  scrollbar-face-color: #00ff00;
+}
+
+* {
+  scrollbar-track-color: #000000;
+}
+
+/* Estilização para Edge e Internet Explorer */
+/* Edge requer o uso da propriedade scrollbar-color, semelhante ao Firefox */
+/* Internet Explorer não suporta muitas personalizações avançadas da barra de rolagem */
+
+* {
+  scrollbar-color: #00ff00 #000000;
 }
