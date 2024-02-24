@@ -1,6 +1,6 @@
 import { HTMLAttributes } from 'react'
 
-interface ContentProps extends HTMLAttributes<HTMLDivElement> { }
+interface ContentProps extends HTMLAttributes<HTMLDivElement> {}
 
 export function Content({ ...props }: ContentProps) {
   return (

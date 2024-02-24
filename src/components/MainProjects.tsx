@@ -4,8 +4,6 @@ import { useLanguage } from '@/hooks/useLanguage'
 import { useTheme } from '@/hooks/useTheme'
 import { projects } from '@/projects'
 import { Language } from '@/stores/app'
-import { GitHubLogoIcon } from '@radix-ui/react-icons'
-import { LinkIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 

@@ -13,7 +13,7 @@ const headerStyles = tv({
   },
 })
 
-interface RootProps extends HTMLAttributes<HTMLHeadElement> { }
+interface RootProps extends HTMLAttributes<HTMLHeadElement> {}
 
 export function Root({ className, ...props }: RootProps) {
   const { theme } = useTheme()
