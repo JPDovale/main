@@ -1,8 +1,10 @@
 import axios, { AxiosHeaders, AxiosInstance, AxiosRequestConfig } from 'axios'
 import { Response } from './responses/response'
 
+const ENVIRONMENT = process.env.NODE_ENV ?? 'production'
+
 const apiConfig: AxiosInstance = axios.create({
-  baseURL: 'http://localhost:3000/api',
+  baseURL: ENVIRONMENT === 'production' ? '/api' : 'http://localhost:3000/api',
   withCredentials: true,
 })
 
