@@ -4,6 +4,7 @@
     "@rubykgen/eslint-config/next"
   ],
   "rules": {
-    "camelcase": "off"
+    "camelcase": "off",
+    "@next/next/no-page-custom-font": "off"
   }
 }

@@ -21,7 +21,10 @@ export function MainProjects() {
   const { theme } = useTheme()
 
   return (
-    <section className="w-full max-w-screen-lg mx-auto z-10 pb-40">
+    <section
+      className="w-full max-w-screen-lg mx-auto z-10 pb-40"
+      id="main-projects"
+    >
       <h2 className="text-3xl font-bold font-body opacity-60 text-gray-500">
         {translations[language].title}
       </h2>
@@ -79,6 +82,7 @@ export function MainProjects() {
                 <div className="flex gap-4 justify-center">
                   {project.links.map((link) => (
                     <Link
+                      target="_blank"
                       key={link.text}
                       href={link.url}
                       data-theme={theme}

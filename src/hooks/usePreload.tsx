@@ -2,6 +2,8 @@
 import { Language, Theme, useAppStore } from '@/stores/app'
 import { CookiesKeys, useCookies } from './useCookies'
 import { useEffect } from 'react'
+import { User } from 'firebase/auth'
+import { useFirebaseStore } from '@/stores/firebase'
 
 export function usePreload() {
   const { get } = useCookies()
@@ -11,16 +13,23 @@ export function usePreload() {
     setLanguage: state.setLanguage,
   }))
 
+  const { setUser } = useFirebaseStore((state) => ({
+    setUser: state.setUser,
+  }))
+
   useEffect(() => {
     if (isLoadingApp) {
       const theme = get<Theme>(CookiesKeys.THEME) ?? Theme.LIGHT
+      const user = JSON.parse(get<string>(CookiesKeys.USER) ?? 'null') as User
+
       const language =
         get<Language>(CookiesKeys.LANGUAGE) ?? Language.PORTUGUESE_BR
 
       setTheme(theme)
       setLanguage(language)
+      setUser(user)
     }
-  }, [get, setTheme, setLanguage, isLoadingApp])
+  }, [get, setTheme, setLanguage, setUser, isLoadingApp])
 
   const isLoading = isLoadingApp
 

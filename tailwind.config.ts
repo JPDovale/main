@@ -20,8 +20,8 @@ const config = {
         'green-500': '#00ff00',
       },
       fontFamily: {
-        title: 'var(--font-pixels)',
-        body: 'var(--font-roboto)',
+        title: ['var(--font-pixels)', 'Pixelify Sans', 'sans-serif'],
+        body: ['var(--font-roboto)', 'Robot', 'sans-serif'],
       },
       keyframes: {
         'accordion-down': {
@@ -48,7 +48,7 @@ const config = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
 } satisfies Config
 
 export default config

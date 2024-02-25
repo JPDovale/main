@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* Estilização para Webkit (Chrome, Safari, Opera) */
 ::-webkit-scrollbar {
   width: 5px;

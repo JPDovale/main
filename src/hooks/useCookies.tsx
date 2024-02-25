@@ -4,13 +4,17 @@ import { setCookie, parseCookies, destroyCookie } from 'nookies'
 export enum CookiesKeys {
   THEME = '@PRT-JP-MAIN:THEME',
   LANGUAGE = '@PRT-JP-MAIN:LANGUAGE',
+  USER = '@PRT-JP-MAIN:USER',
 }
 
 export function useCookies() {
   function get<T>(key: CookiesKeys): T | null {
     const cookies = parseCookies()
+
     if (!cookies[key]) return null
+
     const response = JSON.parse(cookies[key]) as T
+
     return response
   }
 
