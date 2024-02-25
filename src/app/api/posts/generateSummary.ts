@@ -16,7 +16,7 @@ export function generateSummary(content: string) {
     paragraphs.push(actualParagraph)
   }
 
-  const summary = paragraphs.slice(0, 4).join('\n\n')
+  const summary = paragraphs.slice(0, 3).join('\n\n')
 
   if (summary.length > 600) {
     return summary.slice(0, 600).concat('...')

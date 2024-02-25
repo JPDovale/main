@@ -11,6 +11,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 import { User } from 'lucide-react'
 import { CookiesKeys, useCookies } from '@/hooks/useCookies'
 import { useTheme } from '@/hooks/useTheme'
+import { usePathname } from 'next/navigation'
 
 const translations = {
   [Language.PORTUGUESE_BR]: {
@@ -36,6 +37,9 @@ export function Navigation() {
     setUser: state.setUser,
     user: state.user,
   }))
+
+  const pathname = usePathname()
+  const isToShowLanguageSwitch = !pathname.includes('/articles')
 
   async function handleGoogleLogin() {
     const provider = new GoogleAuthProvider()
@@ -80,9 +84,11 @@ export function Navigation() {
         <li>
           <SwitchTheme />
         </li>
-        <li>
-          <SwitchLanguage />
-        </li>
+        {isToShowLanguageSwitch && (
+          <li>
+            <SwitchLanguage />
+          </li>
+        )}
 
         {user && (
           <li>
