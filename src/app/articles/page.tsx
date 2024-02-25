@@ -10,6 +10,8 @@ interface ArticlePageProps {
   }
 }
 
+export const revalidate = 600
+
 export default async function ArticlePages({ searchParams }: ArticlePageProps) {
   const response = await getPostsRequest({ tag: searchParams.tag })
 
