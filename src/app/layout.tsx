@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Pixelify_Sans, Roboto } from 'next/font/google'
 import './globals.css'
 import { PreloadProvider } from '@/providers/PreloadProvider'
+import { Analytics } from '@vercel/analytics/react'
 
 const pixels = Pixelify_Sans({
   subsets: ['latin-ext'],
@@ -32,6 +33,7 @@ export default function RootLayout({
         className={`${pixels.variable} ${roboto.variable} bg-zinc-100 overflow-x-hidden`}
       >
         <PreloadProvider>{children}</PreloadProvider>
+        <Analytics />
       </body>
     </html>
   )
