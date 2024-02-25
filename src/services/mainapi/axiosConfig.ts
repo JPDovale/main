@@ -4,7 +4,10 @@ import { Response } from './responses/response'
 const ENVIRONMENT = process.env.NODE_ENV ?? 'production'
 
 const apiConfig: AxiosInstance = axios.create({
-  baseURL: ENVIRONMENT === 'production' ? '/api' : 'http://localhost:3000/api',
+  baseURL:
+    ENVIRONMENT === 'production'
+      ? 'https://jpdovale.vercel.app/api'
+      : 'http://localhost:3000/api',
   withCredentials: true,
 })
 
