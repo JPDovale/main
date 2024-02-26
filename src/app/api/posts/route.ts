@@ -94,7 +94,7 @@ export async function POST(req: NextRequest) {
     })
   }
 
-  await prisma.post.create({
+  const newPost = await prisma.post.create({
     data: {
       slug: generateSlug(post.title),
       title: post.title,
@@ -112,5 +112,5 @@ export async function POST(req: NextRequest) {
     },
   })
 
-  return NextResponse.json({ ok: true })
+  return NextResponse.json({ ok: true, postId: newPost.slug })
 }

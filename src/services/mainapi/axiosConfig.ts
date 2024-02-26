@@ -7,7 +7,7 @@ const apiConfig: AxiosInstance = axios.create({
   baseURL:
     ENVIRONMENT === 'production'
       ? 'https://jpdovale.vercel.app/api'
-      : 'http://localhost:3000/api',
+      : 'http://localhost:3001/api',
   withCredentials: true,
 })
 
