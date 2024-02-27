@@ -9,7 +9,7 @@ const translations = {
     whoAmI:
       'Apoixonado por tecnologia e arte desde os 8 anos, buscando um mundo que vá além das telas.',
     about:
-      'Olá! Me chamo João Paulo do Vale. Sou entusiasta de tecnologia desde os 7 anos, quando me aventurei no mundo da programação criando mods para Minecraft. Após superar obstáculos, incluindo a falta de recursos, reacendi a minha paixão pelo desenvolvimento de software. Hoje me comprometo com o aprendizado contínuo na vasta área da computação.',
+      'Olá! Me chamo João Paulo do Vale. Sou entusiasta de tecnologia desde os 8 anos, quando me aventurei no mundo da programação criando mods para Minecraft. Após superar obstáculos, incluindo a falta de recursos, reacendi a minha paixão pelo desenvolvimento de software. Hoje me comprometo com o aprendizado contínuo na vasta área da computação.',
     aboutTitle: 'Sobre mim',
   },
   [Language.ENGLISH]: {
