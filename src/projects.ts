@@ -14,6 +14,47 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: 'JPDovale - Main',
+    content: [
+      {
+        'pt-BR': 'O ponto de entrada para o meu mundo programado.',
+        'en-US': 'The entry point to my programmed world.',
+      },
+      {
+        'pt-BR':
+          'Aqui é o lugar onde eu exponho ideias e exercito a criatividade.',
+        'en-US':
+          'This is the place where I share ideas and exercise creativity.',
+      },
+      {
+        'pt-BR':
+          'Um lugar limpo e sem muitas distrações, esse projeto foi construído de uma forma que facilitasse expor as coisas que faço. Apenas por curiosidade, esse portfólio está integrado com o meu bloco de notas...',
+        'en-US':
+          'A clean place with few distractions, this project was built in a way that facilitates the showcasing of the things I do. Just out of curiosity, this portfolio is integrated with my notebook...',
+      },
+      {
+        'pt-BR':
+          'As coisas por aqui parecem mágica... Eu digito no meu bloco de notas e bum, você está vendo isso na sua tela.',
+        'en-US':
+          "Things around here seem like magic... I type on my notepad and, boom, you're seeing this on your screen.",
+      },
+      {
+        'pt-BR': 'Seja bem-vindo ao meu mundinho particular.',
+        'en-US': 'Welcome to my little world.',
+      },
+    ],
+    stack:
+      'Next.js, TailwindCSS, TypeScript, Node.js, PostgreSQL, Prisma, Prisma Studio',
+    links: [
+      {
+        url: 'https://github.com/JPDovale/main',
+        text: 'GitHub',
+        Icon: Github,
+      },
+    ],
+    image: '/main.png',
+  },
+  {
     title: 'MagiScrita',
     content: [
       {
