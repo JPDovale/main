@@ -8,10 +8,16 @@ import { GoogleLogo } from '@phosphor-icons/react'
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import { useFirebaseStore } from '@/stores/firebase'
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
-import { User } from 'lucide-react'
+import { LogOut, User } from 'lucide-react'
 import { CookiesKeys, useCookies } from '@/hooks/useCookies'
 import { useTheme } from '@/hooks/useTheme'
 import { usePathname } from 'next/navigation'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
+  DropdownMenuItem,
+} from '../ui/dropdown-menu'
 
 const translations = {
   [Language.PORTUGUESE_BR]: {
@@ -52,10 +58,13 @@ export function Navigation() {
       setUser(response.user)
       set(CookiesKeys.USER, JSON.stringify(response.user))
     } catch (error) {
-      console.log(error)
-
       alert('Erro ao realizar login com o Google')
     }
+  }
+
+  function handleLogout() {
+    setUser(null)
+    set(CookiesKeys.USER, '')
   }
 
   return (
@@ -92,15 +101,31 @@ export function Navigation() {
 
         {user && (
           <li>
-            <Avatar
-              data-theme={theme}
-              className="border border-violet-700 w-8 h-8 data-[theme=dark]:border-green-500 ease-in-out duration-200"
-            >
-              <AvatarImage src={user.photoURL || ''} />
-              <AvatarFallback>
-                <User />
-              </AvatarFallback>
-            </Avatar>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Avatar
+                  data-theme={theme}
+                  className="border border-violet-700 w-8 h-8 data-[theme=dark]:border-green-500 ease-in-out duration-200 cursor-pointer"
+                >
+                  <AvatarImage src={user.photoURL || ''} />
+                  <AvatarFallback>
+                    <User />
+                  </AvatarFallback>
+                </Avatar>
+              </DropdownMenuTrigger>
+
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem>
+                  <button
+                    className="flex gap-2 cursor-pointer items-center flex-1"
+                    type="button"
+                    onClick={handleLogout}
+                  >
+                    <LogOut size={14} /> Sair
+                  </button>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </li>
         )}
 

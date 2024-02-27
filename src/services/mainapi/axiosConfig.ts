@@ -7,7 +7,7 @@ const apiConfig: AxiosInstance = axios.create({
   baseURL:
     ENVIRONMENT === 'production'
       ? 'https://jpdovale.vercel.app/api'
-      : 'http://localhost:3001/api',
+      : 'http://localhost:3000/api',
   withCredentials: true,
 })
 
@@ -15,11 +15,15 @@ apiConfig.interceptors.response.use(
   (res) => res,
   (error) => {
     if (error.response && error.response.data) {
-      return Promise.resolve(error.response.data)
+      return Promise.resolve({
+        message: error.response.data,
+        status: error.response.status,
+      })
     }
 
     const err = {
       message: 'Não foi possível se conectar com o servidor!',
+      status: 500,
     }
     return Promise.resolve(err)
   },

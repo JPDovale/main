@@ -43,8 +43,7 @@ export const projects: Project[] = [
         'en-US': 'Welcome to my little world.',
       },
     ],
-    stack:
-      'Next.js, TailwindCSS, TypeScript, Node.js, PostgreSQL, Prisma, Prisma Studio',
+    stack: 'NextJs, TailwindCSS, TypeScript, NodeJs, PostgreSQL, Prisma, CI/CD',
     links: [
       {
         url: 'https://github.com/JPDovale/main',
@@ -81,7 +80,7 @@ export const projects: Project[] = [
           'I believe the extent of knowledge this project has given me is immeasurable, as it spanned various domains, both technical and behavioral, since I had direct contact with users.',
       },
     ],
-    stack: 'React, Electron, Node.js, SQLite',
+    stack: 'React, Electron, Node.js, SQLite, TailwindCSS, Vitest',
     links: [
       {
         url: 'https://github.com/JPDovale/ms-desktop',
@@ -130,7 +129,7 @@ export const projects: Project[] = [
           'With a creative mind and a strong desire to implement something involving sockets, off I went to create not just one app, but two.',
       },
     ],
-    stack: 'React, Electron, Node.js, WebSocket, React Native',
+    stack: 'React, Electron, NodeJs, WebSocket, React Native',
     links: [
       {
         Icon: Github,
