@@ -22,7 +22,7 @@ export function SwitchTheme() {
 
   return (
     <Switch
-      className="ml-4"
+      className="ml-4 max-sm:ml-0"
       onCheckedChange={handleSwitchThemeMode}
       checked={theme === Theme.DARK}
     />

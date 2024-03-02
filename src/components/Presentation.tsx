@@ -29,29 +29,29 @@ export function Presentation() {
   return (
     <section
       data-theme={theme}
-      className="w-full max-w-screen-xl mx-auto flex flex-col items-center mt-44 text-violet-700 data-[theme=dark]:text-green-500 ease-in-out duration-200"
+      className="w-full max-w-screen-xl mx-auto flex flex-col items-center mt-44 text-violet-700 data-[theme=dark]:text-green-500 ease-in-out duration-200 px-4"
     >
-      <h1 className="text-7xl z-[1] font-bold font-title">
+      <h1 className="text-7xl z-[1] font-bold font-title max-md:text-6xl max-md:text-center">
         João Paulo do Vale
       </h1>
-      <h3 className="text-lg font-bold font-body z-[1]">
+      <h3 className="font-bold font-body z-[1] sm:text-lg">
         {translations[language].whatIDo}
       </h3>
 
       <p
         data-theme={theme}
-        className="text-xl font-bold border-b border-t rounded-3xl py-4 px-2 border-violet-700 mt-20 font-body max-w-lg text-center shadow-2xl mb-60 data-[theme=dark]:border-green-500 backdrop-blur-[1px]"
+        className="text-xl font-bold border-b border-t rounded-3xl py-4 px-2 border-violet-700 mt-20 font-body max-w-lg text-center shadow-2xl mb-60 data-[theme=dark]:border-green-500 backdrop-blur-[1px] max-md:text-sm :mb-40"
       >
         {translations[language].whoAmI}
       </p>
 
-      <h3 className="text-3xl w-full mb-4 max-w-screen-lg font-bold font-body opacity-60 text-gray-500">
+      <h3 className="text-3xl w-full mb-4 max-w-screen-lg font-bold font-body opacity-60 text-gray-500 max-md:text-2xl">
         {translations[language].aboutTitle}
       </h3>
 
       <p
         data-theme={theme}
-        className="font-body text-black text-justify mb-20 max-w-screen-lg text-lg font-bold opacity-80 ease-in-out duration-200 data-[theme=dark]:text-white"
+        className="font-body text-black text-justify mb-20 max-w-screen-lg text-lg font-bold opacity-80 ease-in-out duration-200 data-[theme=dark]:text-white max-md:text-sm"
       >
         {translations[language].about}
       </p>

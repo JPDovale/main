@@ -22,24 +22,24 @@ export function MainProjects() {
 
   return (
     <section
-      className="w-full max-w-screen-lg mx-auto z-10 pb-40"
+      className="w-full max-w-screen-lg mx-auto z-10 pb-40 px-4"
       id="main-projects"
     >
-      <h2 className="text-3xl font-bold font-body opacity-60 text-gray-500">
+      <h2 className="text-3xl font-bold font-body opacity-60 text-gray-500 max-md:text-2xl">
         {translations[language].title}
       </h2>
 
-      <ul className="flex flex-col gap-32 w-full mt-8">
+      <ul className="flex flex-col gap-32 w-full mt-8 max-md:mt-4 max-md:gap-8">
         {projects.map((project, i) => {
           const even = i % 2 === 0
 
           return (
             <li
               key={project.title}
-              className="flex data-[even=false]:flex-row-reverse justify-between gap-16"
+              className="flex data-[even=false]:flex-row-reverse justify-between gap-16 max-md:flex-col max-md:gap-8 max-md:data-[even=false]:flex-col max-md:border-b max-md:border-b-zinc-900/50 max-md:pb-8"
               data-even={even}
             >
-              <div className="w-1/2">
+              <div className="w-1/2 max-md:w-full">
                 <Image
                   className="rounded-lg z-[1] shadow-2xl shadow-black/50 w-full h-full object-cover"
                   src={project.image}
@@ -50,7 +50,7 @@ export function MainProjects() {
                 />
               </div>
 
-              <div className="w-1/2 flex flex-col gap-2">
+              <div className="w-1/2 flex flex-col gap-2 max-md:w-full">
                 <h4
                   data-theme={theme}
                   className="text-3xl font-bold font-title text-violet-700 data-[theme=dark]:text-green-500 ease-in-out duration-200"
@@ -79,14 +79,14 @@ export function MainProjects() {
                   {project.stack}
                 </span>
 
-                <div className="flex gap-4 justify-center">
+                <div className="flex gap-4 justify-center max-md:flex-col max-md:gap-2">
                   {project.links.map((link) => (
                     <Link
                       target="_blank"
                       key={link.text}
                       href={link.url}
                       data-theme={theme}
-                      className="font-title flex gap-2 items-center uppercase text-violet-700 font-bold border border-violet-500 px-6 py-1 rounded-full hover:bg-violet-700 hover:text-zinc-100 hover:shadow-xl ease-in-out duration-200 data-[theme=dark]:text-green-500 data-[theme=dark]:hover:bg-green-500 data-[theme=dark]:border-green-500 data-[theme=dark]:hover:text-zinc-100"
+                      className="font-title max-md:text-sm flex gap-2 items-center uppercase text-violet-700 font-bold border border-violet-500 px-6 py-1 rounded-full hover:bg-violet-700 hover:text-zinc-100 hover:shadow-xl ease-in-out duration-200 data-[theme=dark]:text-green-500 data-[theme=dark]:hover:bg-green-500 data-[theme=dark]:border-green-500 data-[theme=dark]:hover:text-zinc-100"
                     >
                       <link.Icon size={16} />
                       {link.text}

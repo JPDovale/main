@@ -3,6 +3,7 @@ import { EmptySpace } from './EmptySpace'
 import { Content } from './Content'
 import { Logo } from './Logo'
 import { Navigation } from './Navigation'
+import { NavigationDropdown } from './NavigationDropdown'
 
 export function Header() {
   return (
@@ -12,6 +13,7 @@ export function Header() {
           <Logo />
 
           <Navigation />
+          <NavigationDropdown />
         </Content>
       </Root>
       <EmptySpace />

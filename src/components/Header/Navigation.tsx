@@ -68,7 +68,7 @@ export function Navigation() {
   }
 
   return (
-    <nav className="flex h-full items-center">
+    <nav className="flex h-full items-center max-sm:hidden">
       <ul className="flex gap-4 h-full items-center">
         <li>
           <NavigationItem href="/">

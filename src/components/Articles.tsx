@@ -20,8 +20,8 @@ export function Articles({ posts, tag }: ArticleProps) {
   })
 
   return (
-    <section className="w-full flex flex-col max-w-screen-lg mx-auto z-10 pb-40 mt-12">
-      <h1 className="text-3xl font-bold font-body opacity-60 text-gray-500">
+    <section className="w-full flex flex-col max-w-screen-lg mx-auto z-10 pb-40 mt-12 px-4">
+      <h1 className="text-3xl font-bold font-body opacity-60 text-gray-500 max-md:text-2xl">
         Artigos recentes
       </h1>
 
@@ -32,14 +32,14 @@ export function Articles({ posts, tag }: ArticleProps) {
           </span>
           <Link
             href="/articles"
-            className="font-bold font-body bg-zinc-800 text-white px-6 py-0.5 rounded-full border border-zinc-100"
+            className="font-bold font-body bg-zinc-800 text-white px-6 py-0.5 rounded-full border border-zinc-100 max-md:text-sm"
           >
             Limpar busca
           </Link>
         </div>
       )}
 
-      <div className="grid grid-cols-2 mt-4 gap-8">
+      <div className="grid grid-cols-2 mt-4 gap-8 max-md:grid-cols-1">
         <div className="flex flex-col gap-8">
           {leftPostsSide.map((p) => (
             <Article key={p.id} article={p} />
