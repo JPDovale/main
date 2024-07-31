@@ -1,4 +1,4 @@
-import { Github, LucideIcon } from 'lucide-react'
+import { Github, type LucideIcon } from 'lucide-react'
 import { Language } from './stores/app'
 
 export type Project = {

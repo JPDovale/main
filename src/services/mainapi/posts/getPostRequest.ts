@@ -1,5 +1,5 @@
 import { connection } from '../axiosConfig'
-import { Post } from './getPostsRequest'
+import type { Post } from './getPostsRequest'
 
 interface GetPostRequest {
   slug: string

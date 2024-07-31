@@ -1,7 +1,7 @@
 'use client'
 import { usePreload } from '@/hooks/usePreload'
 import { useTheme } from '@/hooks/useTheme'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 interface PreloadProviderProps {
   children: ReactNode

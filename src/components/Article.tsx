@@ -2,7 +2,7 @@
 import { marked } from 'marked'
 import Link from 'next/link'
 import { useTheme } from '@/hooks/useTheme'
-import { Post } from '@/services/mainapi/posts/getPostsRequest'
+import type { Post } from '@/services/mainapi/posts/getPostsRequest'
 
 interface ArticleProps {
   article: Post

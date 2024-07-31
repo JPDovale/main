@@ -1,6 +1,6 @@
 'use client'
 import { useTheme } from '@/hooks/useTheme'
-import { HTMLAttributes } from 'react'
+import type { HTMLAttributes } from 'react'
 import { tv } from 'tailwind-variants'
 
 const headerStyles = tv({

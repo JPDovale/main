@@ -1,5 +1,5 @@
 import { prisma } from '@/services/prisma/prismaConnection'
-import { NextRequest, NextResponse } from 'next/server'
+import { type NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { generateSummary } from './generateSummary'
 import { validateApiKey } from './validateApiKey'

@@ -1,4 +1,4 @@
-import { Post } from '@/services/mainapi/posts/getPostsRequest'
+import type { Post } from '@/services/mainapi/posts/getPostsRequest'
 import { Article } from './Article'
 import Link from 'next/link'
 

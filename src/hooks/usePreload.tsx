@@ -2,7 +2,7 @@
 import { Language, Theme, useAppStore } from '@/stores/app'
 import { CookiesKeys, useCookies } from './useCookies'
 import { useEffect } from 'react'
-import { User } from 'firebase/auth'
+import type { User } from 'firebase/auth'
 import { useFirebaseStore } from '@/stores/firebase'
 
 export function usePreload() {

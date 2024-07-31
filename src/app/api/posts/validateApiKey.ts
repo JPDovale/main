@@ -1,5 +1,5 @@
 import { compareSync } from 'bcrypt'
-import { NextRequest, NextResponse } from 'next/server'
+import { type NextRequest, NextResponse } from 'next/server'
 
 export function validateApiKey(req: NextRequest) {
   const apiKey = req.headers.get('x-api-key')

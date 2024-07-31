@@ -1,6 +1,6 @@
 import { create } from 'zustand'
-import { FirebaseApp, initializeApp } from 'firebase/app'
-import { Auth, User, getAuth } from 'firebase/auth'
+import { type FirebaseApp, initializeApp } from 'firebase/app'
+import { type Auth, type User, getAuth } from 'firebase/auth'
 
 interface UseFirebaseStore {
   firebaseApp: FirebaseApp
