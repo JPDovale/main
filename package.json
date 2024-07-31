@@ -6,7 +6,7 @@
 		"dev": "next dev",
 		"build": "npx prisma generate && npm run lint && next build",
 		"start": "next start",
-		"lint": "npx biome lint --write ."
+		"lint": "npx biome lint --write ./src"
 	},
 	"dependencies": {
 		"@phosphor-icons/react": "^2.0.15",
